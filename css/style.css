@@ -1,0 +1,349 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --primary-text-color: #212121;
+  --text-color: #757575;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --logo-color: #000000;
+  --grey-color: #f5f4fa;
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --card-interval: 30px;
+}
+body {
+  font-family: Roboto, sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+  letter-spacing: 0.03em;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+/* Common classes */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* common header */
+.page-header {
+  border-bottom: 1px solid #ececec;
+  height: 80px;
+  display: flex;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: var(--accent-color);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 93px;
+}
+
+.studio {
+  display: inline-block;
+  color: var(--logo-color);
+}
+
+.nav-list {
+  display: flex;
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.link {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.link-current {
+  color: var(--accent-color);
+  text-decoration: none;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.link:hover,
+.link:focus,
+.contacts:hover,
+.contacts:focus {
+  color: var(--accent-color);
+}
+
+.contacts-list {
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+}
+.contacts {
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* main index.html */
+.section-hero {
+  padding: 200px 0;
+  background: #2f303a;
+  text-align: center;
+}
+.title-hero {
+  color: var(--primary-white-color);
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.btn {
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+  font-size: 16px;
+  line-height: 1.88;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0;
+  padding: 10px 32px;
+}
+.btn:hover {
+  background: #188ce8;
+}
+.section {
+  padding: 94px 0;
+}
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.67;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.features-list {
+  display: flex;
+}
+.features {
+  flex-basis: 270px;
+}
+.features:not(:last-child) {
+  margin-right: var(--card-interval);
+}
+
+.features-title {
+  font-weight: 700;
+  line-height: 1.14;
+  margin-bottom: 10px;
+}
+.features-text {
+  color: var(--text-color);
+  line-height: 1.71;
+  text-align: left;
+}
+.section-img {
+  padding-top: 0;
+}
+.img-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-team {
+  background: var(--grey-color);
+}
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+.team-list-item {
+  background: var(--primary-white-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+}
+.team-stand {
+  padding: 30px 0;
+}
+.team-list-name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.19;
+  margin-bottom: 10px;
+}
+.team-list-position {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.19;
+}
+/* main portfolio.html */
+.portfolio-section {
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filter-item {
+}
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-button {
+  cursor: pointer;
+  background: var(--grey-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.63;
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  padding: 6px 22px;
+}
+.filter-button:hover {
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-interval));
+  margin-top: calc(-1 * var(--card-interval));
+}
+
+.project-item {
+  flex-basis: calc(100% / 3 - var(--card-interval));
+  margin-left: var(--card-interval);
+  margin-top: var(--card-interval);
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.project-text {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.88;
+}
+.border {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
+/* common footer */
+.footer {
+  background: #2f303a;
+  padding: 60px 0;
+}
+.logo-footer {
+  color: var(--accent-color);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.studio-footer {
+  color: var(--primary-white-color);
+  display: inline-block;
+}
+.address {
+  color: var(--primary-white-color);
+  line-height: 1.71;
+}
+.address-list {
+  font-style: normal;
+}
+
+.address-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.e-mail-footer {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  display: block;
+}
+.tel-footer {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  display: block;
+}
