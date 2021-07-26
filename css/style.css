@@ -56,8 +56,6 @@ ul {
   margin: -1px;
   border: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -70,12 +68,12 @@ ul {
 }
 .container-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 .site-nav {
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .logo {
@@ -127,7 +125,10 @@ ul {
 }
 .link:hover,
 .link:focus,
-.e-mail:hover,
+.mail:hover,
+.mail:focus,
+.tel:hover,
+.tel:focus,
 .contacts:hover,
 .contacts:focus {
   color: var(--accent-color);
@@ -138,35 +139,30 @@ ul {
   align-items: center;
 }
 .contacts-item {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  
+  display: flex
 }
 
-.e-mail,.tel{
+.mail,.tel{
   display: flex;
   color: var(--text-color);
   text-decoration: none;
   align-items: center;
+  font-weight: 500;
+  line-height: 1.14;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.mail-icon,.tel-icon{
+  margin-right: 10px;
+  fill: var(--text-color);
 }
 
-/* .e-mail::before{
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-image: url(../images/svg/envelope.svg);
-  background-repeat: no-repeat;
-  content:"";
+.mail-icon:hover,
+.mail-icon:focus,
+.tel-icon:hover, 
+.tel-icon:hover{
+  fill: var(--accent-color);
 }
-
-.tel::before{
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  background-image: url(../images/svg/smartphone.svg);
-  background-repeat: no-repeat;
-  content: "";
-} */
 
 
 /* main index.html */
@@ -221,33 +217,23 @@ ul {
   display: flex;
 }
 .features-item {
-  flex-basis: 270px;
+
 }
 .features-item:not(:last-child) {
   margin-right: var(--card-interval);
 }
-.features-item::before{
-  display: block;
-  content: "";
-  height: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--grey-color);
-  margin-bottom: var(--card-interval);
-}
-.features-item:nth-child(1)::before{
-  background-image: url(../images/svg/Group.svg);
-}
-.features-item:nth-child(2)::before{
-  background-image: url(../images/svg/clock\ 1.svg)
-}
-.features-item:nth-child(3)::before{
-  background-image: url(../images/svg/diagram\ 1.svg)
-}
-.features-item:nth-child(4)::before{
-  background-image: url(../images/svg/astronaut\ 1.svg)
-}
 
+.features-box{
+  display: flex;
+  height: 120px;
+  width: 270px;
+  margin-bottom:var(--card-interval);
+  background: var(--grey-color);
+  align-items: center;
+}
+.features-icon{
+
+}
 
 .features-title {
   font-weight: 700;
@@ -293,6 +279,37 @@ ul {
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 16px;
+}
+.social-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-list-item:not(:last-child){
+  margin-right: 10px;
+}
+.social-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 44px;
+  background: #FFFFFF;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+}
+.social-links:hover,
+.social-links:focus{
+  background: var(--accent-color);
+}
+.links-icon{
+  fill: #AFB1B8;
+}
+.links-icon:hover,
+.links-icon:focus{
+  fill: #FFFFFF;
 }
 /* main portfolio.html */
 .portfolio-section {
@@ -307,6 +324,7 @@ ul {
 }
 .filter-item:not(:last-child) {
   margin-right: 8px;
+  
 }
 
 .filter-button {
@@ -365,6 +383,12 @@ ul {
   background: var(--background-color);
   padding: 60px 0;
 }
+.container-footer {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 .logo-footer {
   color: var(--accent-color);
   font-family: Raleway;
@@ -383,6 +407,7 @@ ul {
 .address {
   color: var(--primary-white-color);
   line-height: 1.71;
+  padding-right: 1em;
 }
 .address-list {
   font-style: normal;
@@ -400,4 +425,18 @@ ul {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   display: block;
+}
+.social-box{
+  width: 206px;
+  margin: 12px 0 0 70px;
+}
+.social-box-title{
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.14;
+  color:#ffffff;
+  margin-bottom: 20px;
+}
+.social-links-footer{
+  background: #43444D;
 }
